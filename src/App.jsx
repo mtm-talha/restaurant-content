@@ -1,76 +1,80 @@
-
 import "./App.css";
 
 function App() {
-  const restaurantData = 
-    [
-      {
-        "name": "Onyx Restaurant",
-        "website": "https://www.onyxrestaurant.hu/en/",
-        "address": "1051 Budapest, Vörösmarty tér 7-8., Hungary",
-        "contact_number": "+36 30 508 0622",
-        "description": "Onyx Restaurant is a Michelin-starred fine dining establishment in Budapest, offering a unique culinary experience that showcases the best of Hungarian cuisine. The restaurant's elegant interior, attentive service, and exceptional food and wine make it a must-visit destination for foodies and luxury travelers.",
-        "zomato_rating": "4.9/5",
-        "zomato_link": "https://www.zomato.com/budapest/onyx-restaurant-belv%C3%A1ros-lip%C3%B3tv%C3%A1ros",
-        "google_map_link": "https://goo.gl/maps/TWCcU6es83FGiutv9",
-        "image_url": "https://johnrieber.files.wordpress.com/2018/12/onyx-restaurant-budapest-hungary-two-michelin-stars.jpeg?w=700&h=525"
-      },
-      {
-        "name": "Costes Downtown",
-        "website": "https://costesdowntown.hu/",
-        "address": "1051 Budapest, Vigyázó Ferenc u. 5., Hungary",
-        "contact_number": "+36 1 920 1015",
-        "description": "Costes Downtown is a Michelin-starred restaurant in Budapest that offers a contemporary twist on traditional Hungarian cuisine. The restaurant's chic decor, attentive service, and inventive dishes make it a popular destination for foodies and travelers seeking a unique dining experience.",
-        "zomato_rating": "4.8/5",
-        "zomato_link": "https://www.zomato.com/budapest/costes-downtown-belv%C3%A1ros-lip%C3%B3tv%C3%A1ros",
-        "google_map_link": "https://goo.gl/maps/gKTC8zfH2bMfJNnX9",
-        "image_url": "https://costesdowntown.hu/wp-content/uploads/2022/11/Screenshot_548.png"
-      },
-      {
-        "name": "MÁK Bistro",
-        "website": "https://makbistro.hu/en/",
-        "address": "1051 Budapest, Vigyázó Ferenc u. 4., Hungary",
-        "contact_number": "+36 1 951 9041",
-        "description": "MÁK Bistro is a popular restaurant in Budapest, serving modern Hungarian cuisine with a focus on locally-sourced ingredients. The restaurant's stylish decor and friendly staff make it a great spot for a casual meal or a special occasion. The menu changes seasonally and features dishes that are both inventive and comforting, using fresh, high-quality ingredients. The wine list is also carefully curated to complement the flavors of the food.",
-        "zomato_rating": "4.6/5",
-        "zomato_link": "https://www.zomato.com/budapest/m%C3%A1k-bistro-belv%C3%A1ros-lip%C3%B3tv%C3%A1ros",
-        "google_map_link": "https://goo.gl/maps/Z4XV2HX8q3zF5oKj6",
-        "image_url": "https://images.ctfassets.net/314o13npeir2/3ZFWKOg9OhUxuX9XiT6hMW/9e9945eae1fd497c6b876a80aa35126b/mak-bistro-budapest-22.jpg?w=1920&q=80"
-      },
-      {
-        "name": "GasztroBár",
-        "website": "https://gasztrobargroup.com/",
-        "address": "1073 Budapest, Kertész u. 48., Hungary",
-        "contact_number": "+36 70 413 7273",
-        "description": "GasztroBár is a cozy and stylish restaurant in Budapest's bustling Jewish Quarter. The menu features a variety of Hungarian and international dishes, as well as an extensive selection of wines and cocktails. The atmosphere is relaxed and welcoming, making it a great spot for a casual meal or a night out with friends.",
-        "zomato_rating": "4.5/5",
-        "zomato_link": "https://www.zomato.com/budapest/gasztr%C3%B3b%C3%A1r-erzs%C3%A9betv%C3%A1ros",
-        "google_map_link": "https://goo.gl/maps/1fBDJwdW8SCfMmuX9",
-        "image_url": "https://media.wlrp.hu/images/ultimatebudapest.com/uploads/Bors.jpg"
-      },
-      {
-        "name": "Borkonyha WineKitchen",
-        "website": "https://borkonyha.hu/en/",
-        "address": "1051 Budapest, Sas u. 3., Hungary",
-        "contact_number": "+36 1 266 0835",
-        "description": "Borkonyha WineKitchen is a Michelin-starred restaurant in Budapest that offers an unforgettable fine dining experience. The menu features a mix of traditional Hungarian cuisine and modern, international dishes, all made with the finest ingredients and presented beautifully. The wine list is extensive, featuring both Hungarian and international wines, and the restaurant's knowledgeable staff are happy to make recommendations to complement your meal. The elegant, modern decor and attentive service make Borkonyha WineKitchen a top choice for a special occasion or romantic night out.",
-        "zomato_rating": "4.8/5",
-        "zomato_link": "https://www.zomato.com/budapest/borkonyha-winekitchen-belv%C3%A1ros-lip%C3%B3tv%C3%A1ros",
-        "google_map_link": "https://goo.gl/maps/3q63cEEHUtZwskTj8",
-        "image_url": "https://www.hungryformore-mag.com/wp-content/uploads/2016/07/restaurant_borkonyha_budapest_location_4-1080x720.jpg"
-      }
+  const restaurantData = [
+    {
+      name: "Zuma Dubai",
+      website: "https://zumarestaurant.com/dubai/",
+      address: "Gate Village 6, DIFC, Dubai",
+      contact_number: "+971 4 425 5660",
+      description:
+        "Zuma Dubai is a Japanese restaurant located in the Dubai International Financial Centre (DIFC). The restaurant's menu features a range of traditional Japanese dishes, including sushi, sashimi, and robata-grilled meats. The restaurant's decor is sleek and sophisticated, with an open kitchen and a stylish bar that serves a range of cocktails and wines. Some of the standout dishes at Zuma Dubai include the miso-marinated black cod, the wagyu beef skewers, and the spicy tuna roll. The restaurant is known for its lively atmosphere and trendy crowd, making it a popular spot for a night out on the town. Overall, Zuma Dubai offers a memorable dining experience that combines exceptional food with a sophisticated ambiance.",
+      zomato_reviews: "https://www.zomato.com/dubai/zuma-difc",
+      booking_link: "https://www.sevenrooms.com/reservations/zumadubai",
+      image_url:
+        "https://res.cloudinary.com/jerrick/image/upload/d_642250b563292b35f27461a7.png,f_jpg,fl_progressive,q_auto,w_1024/63a98b757194fe001c587612.jpg",
+    },
+    {
+      name: "La Petite Maison Dubai",
+      website: "https://www.lpmdubai.ae/",
+      address: "Gate Village 8, DIFC, Dubai",
+      contact_number: "+971 4 439 0505",
+      description:"La Petite Maison is a French-Mediterranean restaurant located in the Dubai International Financial Centre (DIFC). The restaurant offers a charming and lively atmosphere with a focus on fresh and flavorful cuisine. The menu is inspired by the traditional dishes of the Cote d'Azur, with a focus on fresh seafood and vegetables. The restaurant's decor is elegant and sophisticated, with a charming Mediterranean feel that transports guests to the south of France. The restaurant's lively ambiance and exceptional food have made it a favorite among locals and visitors alike, and it is often recommended for special occasions or romantic dinners. Overall, La Petite Maison offers a memorable dining experience that combines exceptional food, lively atmosphere, and charming decor.",
+      zomato_reviews: "https://www.zomato.com/dubai/la-petite-maison-difc",
+      booking_link:
+        "https://www.sevenrooms.com/reservations/lapetitemaisondubai",
+      image_url:
+        "https://whatson.ae/wp-content/uploads/2017/11/RS-La-Petite-Maison-Abu-Dhabi-22.jpg",
+    },
+    {
+      name: "Carnival by Tresind",
+      website: "https://www.carnivalbytresind.com/",
+      address: "Burj Daman, DIFC, Dubai",
+      contact_number: "+971 4 421 8665",
+      description:"Carnival by Tresind is a modern Indian restaurant located in the DIFC area of Dubai. The restaurant's menu is inspired by the traditional flavors of Indian cuisine, but with a modern and creative twist. Some of the standout dishes at Carnival by Tresind include the tandoori chicken popcorn, the goat cheese kofta, and the lamb shank biryani. The restaurant's decor is colorful and lively, with a carnival-inspired theme that adds to the festive atmosphere. The restaurant is known for its exceptional service, with knowledgeable and friendly staff who are happy to make recommendations and offer guidance on the menu. Overall, Carnival by Tresind offers a unique and exciting dining experience that combines exceptional food, creative presentation, and a lively atmosphere, making it a top choice for a fun night out with friends or family.",
+       zomato_reviews: "https://www.zomato.com/dubai/carnival-by-tresind-difc",
+      booking_link: "https://www.sevenrooms.com/reservations/carnivalbytresind",
+      image_url: "https://images.otstatic.com/prod1/41904068/1/large.jpg",
+    },
+    {
+      name: "Roberto's Dubai",
+      website: "https://www.robertos.ae/",
+      address: "Gate Village 1, DIFC, Dubai",
+      contact_number: "+971 4 386 0066",
+      description:"Roberto's is an upscale Italian restaurant located in the DIFC area of Dubai. The restaurant's menu is inspired by the traditional flavors of Italian cuisine, with a focus on fresh, high-quality ingredients. The menu features a range of classic Italian dishes, such as homemade pasta, wood-fired pizzas, and grilled meats, as well as a selection of creative and innovative dishes that showcase the chef's culinary skills. Some of the standout dishes at Roberto's include the beef tartare, the black truffle risotto, and the braised veal ossobuco. The restaurant's decor is elegant and sophisticated, with a contemporary Italian style that creates a warm and welcoming ambiance. Overall, Roberto's offers a refined and luxurious dining experience that combines exceptional food, impeccable service, and a sophisticated atmosphere, making it a top choice for special occasions or romantic dinners.",
+      zomato_reviews: "https://www.zomato.com/dubai/robertos-difc",
+      booking_link: "https://www.sevenrooms.com/reservations/robertosdubai",
+      image_url:
+        "https://cdn.welcometotheworld.com/wp-content/uploads/2020/08/29104024/ROBERTOS-copy.jpg",
+    },
+    {
+      name: "Akira Back",
+      website: "https://www.akirabackdubai.com/",
+      address: "W Dubai - The Palm, West Crescent, Palm Jumeirah, Dubai",
+      contact_number: "+971 4 245 5800",
+      description:
+        "Akira Back is located in the heart of Dubai's financial district, Akira Back is a contemporary Japanese restaurant that offers a unique culinary experience blending Japanese cuisine with Korean accents. The restaurant's namesake is the famous Korean-American chef Akira Back, who infuses his heritage into every dish. The menu features a range of sushi rolls, sashimi, and grilled meats, as well as signature dishes like the tuna pizza and the wagyu beef tacos. The restaurant's decor is sleek and modern, with an open kitchen and a sushi bar that allow guests to watch the chefs at work. Overall, Akira Back offers a sophisticated yet relaxed dining experience, making it a popular spot for both business and pleasure.",
+      zomato_reviews: "https://www.zomato.com/dubai/akira-back-palm-jumeirah",
+      booking_link: "https://www.sevenrooms.com/reservations/akirabackdubai",
+      image_url:
+        "https://www1.lovethatdesign.com/wp-content/uploads/2019/07/Love-that-design-Akira-Back-05-1024x633.jpg",
+    },
   ];
   return (
-      <>
-        <h1>Top Five Restaurants in Budapest</h1>
-        <div className="container">
-          <div className="row">
-          {restaurantData?.map((data,index)=>
+    <>
+      <h1>Top Five Restaurants in Budapest</h1>
+      <div className="container">
+        <div className="row">
+          {restaurantData?.map((data, index) => (
             <div className="col-12 mb-100" key={index}>
               <article
                 data-file="articles/b.html"
                 data-target="article"
-                className={index%2?"article-full-width":"article-full-width article-right"}
+                className={
+                  index % 2
+                    ? "article-full-width"
+                    : "article-full-width article-right"
+                }
               >
                 <div className="post-image">
                   <img
@@ -90,36 +94,47 @@ function App() {
                     </li>
                   </ul> */}
                   <h4 className="mb-4">
-                    <a href={data.website} target="_blank" className="text-dark" rel="noreferrer">
-                    {data.name}
+                    <a
+                      href={data.website}
+                      target="_blank"
+                      className="text-dark"
+                      rel="noreferrer"
+                    >
+                      {data.name}
                     </a>
                   </h4>
-                  <p className="mb-0 post-summary">
-                  Contact Number: <a href={'tel:'+data.contact_number}>
-                  {data.contact_number}
-                  </a>
-                  </p>
-                  <p className="mb-0 post-summary">
-                    Address:  <a href={"https://www.google.com/maps/place/"+data.address} className="text-dark">
-                    {data.address}
+                  <p className="mb-0 ">
+                    Contact Number:{" "}
+                    <a href={"tel:" + data.contact_number}>
+                      {data.contact_number}
                     </a>
                   </p>
-                  <p className="mb-0 post-summary">
-                    {data.description}
-                  </p>
-                  <p className="mb-0 post-summary">
-                   Zomato Rating:  <a href={data.zomato_link} className="text-dark">
-                    {data.zomato_rating}
+                  <p className="mb-0 ">
+                    Address:{" "}
+                    <a
+                      href={"https://www.google.com/maps/place/" + data.address}
+                    >
+                      {data.address}
                     </a>
                   </p>
-                
+                  <p className="mb-0 post-summary">{data.description}</p>
+                  <p className="mb-0">
+                    <a href={data.zomato_link} target="_blank" rel="noreferrer">
+                      Zomato Review
+                    </a>
+                  </p>
+
+                  <p className="mb-0">
+                    Book now:
+                    <a href={data.booking_link}>{data.name}</a>
+                  </p>
                 </div>
               </article>
             </div>
-          )}
-          </div>
+          ))}
         </div>
-      </>
+      </div>
+    </>
   );
 }
 
