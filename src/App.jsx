@@ -51,8 +51,10 @@ function App() {
       contact_number: "+971 4 818 2222",
       google_map_address:
         "Waldorf Astoria Dubai Palm Jumeirah, Crescent Road, Palm Jumeirah, Dubai",
-      zomato_reviews:
-        "https://www.zomato.com/dubai/social-by-heinz-beck-palm-jumeirah",
+      // zomato_reviews:
+      //   "https://www.zomato.com/dubai/social-by-heinz-beck-palm-jumeirah",
+      tripAdvisor_reviews:
+        "https://www.tripadvisor.com/Restaurant_Review-g295424-d6154951-Reviews-Social-Dubai_Emirate_of_Dubai.html",
       booking_title: "Social by Heinz Beck",
       booking_link: "https://www.sevenrooms.com/reservations/socialdubai",
       zomato_rating: "4.6/5",
@@ -71,8 +73,9 @@ function App() {
       zomato_reviews:
         "https://www.zomato.com/dubai/bread-street-kitchen-bar-palm-jumeirah",
       booking_title: "Bread Street Kitchen & Bar",
-      booking_link:
-        "https://www.sevenrooms.com/reservations/breadstreetkitchenandbar",
+      booking_link: "https://www.sevenrooms.com/reservations/bskdubai",
+      // booking_link:
+      //   "https://www.sevenrooms.com/reservations/breadstreetkitchenandbar",
       zomato_rating: "4.4/5",
       image_url: "/assets/breadstreet.jpeg",
     },
@@ -85,7 +88,9 @@ function App() {
       contact_number: "+971 4 426 2626",
       google_map_address: "Ossiano, Atlantis The Palm, Palm Jumeirah, Dubai",
       zomato_reviews: "https://www.zomato.com/dubai/ossiano-palm-jumeirah",
-      booking_link: "https://www.sevenrooms.com/reservations/ossiano",
+      // booking_link: "https://www.sevenrooms.com/reservations/ossiano",
+      booking_link:
+        "https://www.sevenrooms.com/reservations/ossianodubai?gclid=CjwKCAjw6vyiBhB_EiwAQJRoppoTjshjimR8Nsq4hM1UDjYMwUVbjo8kP_RrELg9wgp0Z_60Fcx1DRoC_eMQAvD_BwE",
       zomato_rating: "4.6/5",
       image_url: "/assets/ossiano.png",
     },
@@ -96,10 +101,13 @@ function App() {
       website: "https://www.ilfarodubai.com/",
       contact_number: "+971 4 568 3137",
       google_map_address: "Azure Residences, Palm Jumeirah, Dubai",
-      zomato_reviews:
-        "https://www.zomato.com/dubai/il-faro-trattoria-lounge-palm-jumeirah",
+      // zomato_reviews:
+      //   "https://www.zomato.com/dubai/il-faro-trattoria-lounge-palm-jumeirah",
+      tripAdvisor_reviews:
+        "https://www.tripadvisor.com/Restaurant_Review-g295424-d22899410-Reviews-Il_Faro_Trattoria-Dubai_Emirate_of_Dubai.html",
       booking_title: "Il Faro Trattoria & Lounge - Seven Rooms",
-      booking_link: "https://www.sevenrooms.com/reservations/ilfaro",
+      // booking_link: "https://www.sevenrooms.com/reservations/ilfaro",
+      booking_link: `https://resy.com/cities/dbntd/il-faro?date=${Date.now()}&seats=2`,
       zomato_rating: "4.5/5",
       image_url: "/assets/faroTrattoria.png",
     },
@@ -114,8 +122,12 @@ function App() {
         "https://www.google.com/maps/place/Khyber+-+Indian+Restaurant+in+Palm+Jumeirah/@25.1124845,55.1380506,17z/data=!3m1!4b1!4m6!3m5!1s0x3e5f6b2cb7213f9d:0x58faa08b544bbf5c!8m2!3d25.1124845!4d55.1380506!16s%2Fg%2F11f3r2sgq2",
       zomato_reviews:
         "https://www.zomato.com/dubai/khyber-dukes-the-palm-palm-jumeirah",
+      tripAdvisor_reviews:
+        "https://www.tripadvisor.com/Restaurant_Review-g295424-d3919600-Reviews-Khyber-Dubai_Emirate_of_Dubai.html",
       booking_title: "Khyber - Seven Rooms",
-      booking_link: "https://www.sevenrooms.com/reservations/dukesthepalm",
+      // booking_link: "https://www.sevenrooms.com/reservations/dukesthepalm",
+      booking_link:
+        "https://www.palazzoversace.ae/restaurants-and-bars/enigma?utm_source=Search+&utm_medium=google&utm_campaign=Oct+2022+-+Enigma+-+Traffic&gclid=CjwKCAjw6vyiBhB_EiwAQJRoph9F4CvetHL7-NUdFTDkoIg127L8dbRFhOKkiW99iuQ1JmRa1ubBiBoC7qkQAvD_BwE",
       zomato_rating: "4.5/5",
       image_url: "/assets/khyber.png",
     },
@@ -143,10 +155,12 @@ function App() {
         "https://www.rixos.com/en/hotel-resort/rixos-the-palm-dubai/restaurants-bars/ristorante-olivo/",
       contact_number: "+971 4 457 5555",
       google_map_address: "Rixos The Palm Dubai, Palm Jumeirah, Dubai",
-      zomato_reviews:
-        "https://www.zomato.com/dubai/l-olivo-ristorante-rixos-the-palm-palm-jumeirah",
+      tripAdvisor_reviews:
+        "https://www.tripadvisor.com/Restaurant_Review-g295424-d8003621-Reviews-L_Olivo_Ristorante-Dubai_Emirate_of_Dubai.html",
+      // zomato_reviews:
+      //   "https://www.zomato.com/dubai/l-olivo-ristorante-rixos-the-palm-palm-jumeirah",
       booking_title: "L'Olivo Ristorante - Seven Rooms",
-      booking_link: "https://www.sevenrooms.com/reservations/rixosthepalmdubai",
+      booking_link: "https://www.sevenrooms.com/reservations/lolivoch",
       zomato_rating: "4.3/5",
       image_url: "/assets/olivo.png",
     },
@@ -214,14 +228,13 @@ function App() {
                   <p className="mb-0">
                     Zomato Reviews:{" "}
                     <a
-                      href={data.zomato_reviews}
+                      href={data.zomato_reviews || data.tripAdvisor_reviews}
                       target="_blank"
                       rel="noreferrer"
                     >
                       {data.title} Reviews
                     </a>
                   </p>
-
                   <p className="mb-0">
                     Book now:{" "}
                     <a
