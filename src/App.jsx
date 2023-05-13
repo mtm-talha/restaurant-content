@@ -167,7 +167,7 @@ function App() {
   ];
   return (
     <>
-      <h1>Best Restaurants in DIFC Dubai</h1>
+      <h1>10 Best Restaurants in Palm Jumeirah Dubai</h1>
       <div className="container">
         <div className="row">
           {restaurantData?.map((data, index) => (
