@@ -635,7 +635,7 @@ textarea.form-control {
 }
 .article-full-width .post-image img {
   height: 400px;
-  width: auto;
+  width: 600px;
 }
 @media (max-width: 767px) {
   .article-full-width .post-image img {
