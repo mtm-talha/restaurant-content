@@ -217,7 +217,7 @@ function App() {
                   </p>
 
                   <p className="mb-0">
-                    Book now:
+                    Book now:{" "}
                     <a
                       href={data.booking_link}
                       target="_blank"
