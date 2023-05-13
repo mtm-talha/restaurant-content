@@ -23,8 +23,7 @@ function App() {
       google_map_address: "Atlantis The Palm, Palm Jumeirah, Dubai",
       zomato_reviews:
         "https://www.zomato.com/dubai/seafire-steakhouse-bar-atlantis-the-palm-palm-jumeirah/reviews",
-      booking_link:
-        "https://www.atlantisthepalm.com/restaurants/seafire-steakhouse",
+      booking_link: "https://www.sevenrooms.com/reservations/seafiredubai",
       zomato_rating: "4.4/5",
       image_url: "/assets/seafire_steakhouse.png",
     },
@@ -39,7 +38,7 @@ function App() {
       zomato_reviews:
         "https://www.zomato.com/dubai/101-dining-lounge-and-bar-one-only-the-palm-palm-jumeirah/reviews",
       booking_link:
-        "https://www.oneandonlyresorts.com/one-and-only-the-palm-dubai/cuisine/101-dining-lounge-bar",
+        "https://www.opentable.ae/r/101-dining-lounge-and-marina-one-and-only-the-palm-dubai?ref=18584",
       zomato_rating: "4.6/5",
       image_url: "/assets/101DiningLounge.png",
     },
@@ -66,6 +65,8 @@ function App() {
         "Bread Street Kitchen & Bar is a modern British restaurant by celebrity chef Gordon Ramsay, serving British classics with a twist.",
       website: "https://www.gordonramsayrestaurants.com/bread-street-kitchen/",
       contact_number: "+971 4 426 2626",
+      google_map_link:
+        "https://www.google.com/maps/place/Gordon+Ramsay's+Bread+Street+Kitchen+%26+Bar/@38.5945625,4.7002327,4z/data=!4m10!1m2!2m1!1sBread+Street+Kitchen+%26+Bar!3m6!1s0x3e5f153efd71e29b:0xfaaf87ac6779077e!8m2!3d25.1315844!4d55.1185175!15sChpCcmVhZCBTdHJlZXQgS2l0Y2hlbiAmIEJhclocIhpicmVhZCBzdHJlZXQga2l0Y2hlbiAmIGJhcpIBGW1vZGVybl9icml0aXNoX3Jlc3RhdXJhbnTgAQA!16s%2Fg%2F1ptwdjb5f",
       google_map_address: "Atlantis The Palm, Palm Jumeirah, Dubai",
       zomato_reviews:
         "https://www.zomato.com/dubai/bread-street-kitchen-bar-palm-jumeirah",
@@ -89,15 +90,15 @@ function App() {
       image_url: "/assets/ossiano.png",
     },
     {
-      title: "ll Faro Trattoria & Lounge",
+      title: "Il Faro Trattoria & Lounge",
       description:
-        "Nestled in the Azure Residences, ll Faro Trattoria & Lounge is an enchanting Italian restaurant offering authentic flavors of Italy. Its waterfront location creates a charming ambiance, and guests can savor traditional Italian dishes while enjoying panoramic views of the sea.Il Faro Trattoria & Lounge is a charming Italian restaurant offering authentic flavors of Italy with stunning waterfront views",
+        "Nestled in the Azure Residences, Il Faro Trattoria & Lounge is an enchanting Italian restaurant offering authentic flavors of Italy. Its waterfront location creates a charming ambiance, and guests can savor traditional Italian dishes while enjoying panoramic views of the sea.Il Faro Trattoria & Lounge is a charming Italian restaurant offering authentic flavors of Italy with stunning waterfront views",
       website: "https://www.ilfarodubai.com/",
       contact_number: "+971 4 568 3137",
       google_map_address: "Azure Residences, Palm Jumeirah, Dubai",
       zomato_reviews:
         "https://www.zomato.com/dubai/il-faro-trattoria-lounge-palm-jumeirah",
-      booking_title: "ll Faro Trattoria & Lounge - Seven Rooms",
+      booking_title: "Il Faro Trattoria & Lounge - Seven Rooms",
       booking_link: "https://www.sevenrooms.com/reservations/ilfaro",
       zomato_rating: "4.5/5",
       image_url: "/assets/faroTrattoria.png",
@@ -109,6 +110,8 @@ function App() {
       website: "https://www.khyber-restaurant.com/",
       contact_number: "+971 4 457 5454",
       google_map_address: "Khyber, Dukes The Palm, Palm Jumeirah, Dubai",
+      google_map_link:
+        "https://www.google.com/maps/place/Khyber+-+Indian+Restaurant+in+Palm+Jumeirah/@25.1124845,55.1380506,17z/data=!3m1!4b1!4m6!3m5!1s0x3e5f6b2cb7213f9d:0x58faa08b544bbf5c!8m2!3d25.1124845!4d55.1380506!16s%2Fg%2F11f3r2sgq2",
       zomato_reviews:
         "https://www.zomato.com/dubai/khyber-dukes-the-palm-palm-jumeirah",
       booking_title: "Khyber - Seven Rooms",
@@ -122,6 +125,8 @@ function App() {
         "Situated in Atlantis The Palm, WHITE Restaurant offers a contemporary dining experience with a fusion of Mediterranean, Asian, and Middle Eastern flavors. With its stylish decor and an extensive menu, it provides a vibrant atmosphere for a memorable culinary journey.",
       website: "https://www.atlantis.com/dubai/entertainment/white-beach-club",
       contact_number: "+971 4 818 2222",
+      google_map_link:
+        "https://www.google.com/maps/place/WHITE+Beach+Dubai/@25.128438,55.1140392,17z/data=!3m1!4b1!4m6!3m5!1s0x3e5f153e4f48d60b:0x20f02e5ccaf6a6ed!8m2!3d25.1284332!4d55.1166141!16s%2Fg%2F1hc2slppr",
       google_map_address:
         "WHITE Restaurant, Atlantis The Palm, Palm Jumeirah, Dubai",
       zomato_reviews:
@@ -194,10 +199,11 @@ function App() {
                     Google Map Address:{" "}
                     <a
                       href={
+                        data.google_map_link ||
                         "https://www.google.com/maps/search/?api=1&query=" +
-                        data.title +
-                        "&" +
-                        data.google_map_address
+                          data.title +
+                          "&" +
+                          data.google_map_address
                       }
                       target="_blank"
                       rel="noreferrer"
