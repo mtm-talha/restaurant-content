@@ -12,9 +12,11 @@
   color: #fff;
   font-size: 16px;
   position: absolute;
-  left: 37%;
-  top: 50%;
-  transform: translateY(-50%);
+  background: #000;
+  width: 100%;
+  bottom: -8px;
+  padding: 11px 0px;
+  opacity: 0.8;
 }
 .container .category-box::after {
   background-color: rgba(0, 0, 0, 0.71);
@@ -103,7 +105,7 @@
   padding: 15px;
 }
 .navbar i {
-  color: #fff;
+  color: #000;
   font-size: 25px;
   margin: 7px 5px 0 5px;
 }
@@ -134,19 +136,32 @@
 .detail-info h4 {
   font-size: 28px;
 }
+.carousel-inner img{
+  height: 500px; 
+  width: 100%;
+}
+.carousel-inner{
+  margin-top: 80px;
+}
+.carousel-inner h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  position: absolute;
+  background: #000;
+  width: 100%;
+  bottom: -8px;
+  padding: 20px 0px;
+  opacity: 0.8;
+}
+.slider-box{
+  position: relative; 
+  overflow: hidden; 
+  padding: 0 !important;
+}
 @media screen and (max-width: 480px) {
   .detail-info img {
     margin-bottom: 20px;
     margin-top: 25px;
   }
-}
-
-.image h2{
-    text-align: center;
-    color: #FFF;
-    font-size: 16px;
-    position: absolute;
-    left: 37%;
-    top: 50%;
-    transform: translateY(-50%);
 }

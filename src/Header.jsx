@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 function Header() {
   const navigate = useNavigate();
   return (
-    <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
       <div className="container">
         <a className="navbar-brand" href="#" onClick={() => navigate("/")}>
           Logo

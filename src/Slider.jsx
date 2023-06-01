@@ -4,46 +4,46 @@ const Slider = () => {
       <div className="carousel-inner">
         <div className="carousel-item active">
           <div className="row">
-            <div className="col image text-center position-relative">
+            <div className="col slider-box">
               <img
                 src="/assets/Atlantis_Dubai.png"
-                className="d-block w-100"
+                className="d-block"
                 alt="Image 1"
               />
               <h2>Atlantis Dubai</h2>
             </div>
-            <div className="col image text-center position-relative">
+            <div className="col slider-box">
               <img
                 src="/assets/Burj_Alarab.png"
-                className="d-block w-100"
+                className="d-block"
                 alt="Image 2"
               />
               <h2>Burj Alarab</h2>
             </div>
-            <div className="col image text-center position-relative">
+            <div className="col slider-box">
               <img
                 src="/assets/DIFC.png"
-                className="d-block w-100"
+                className="d-block"
                 alt="Image 3"
               />
               <h2>DIFC</h2>
             </div>
-            <div className="col image text-center position-relative">
+            <div className="col slider-box">
               <img
                 src="/assets/Dubai_Marina.png"
-                className="d-block w-100"
+                className="d-block"
                 alt="Image 4"
               />
               <h2>Dubai Marina</h2>
             </div>
-            <div className="col image text-center position-relative">
+            {/* <div className="col image text-center position-relative">
               <img
                 src="/assets/Palm_Jumeirah.png"
-                className="d-block w-100"
+                className="d-block"
                 alt="Image 4"
               />
               <h2>Palm Jumeirah</h2>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="carousel-item">
