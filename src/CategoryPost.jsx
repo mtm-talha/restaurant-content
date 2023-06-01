@@ -1,23 +1,23 @@
 const categoryPosts = [
   {
-    media: "/assets/Atlantis_Dubai.png",
-    category: "Asian",
+    media: "/assets/ChineseFood.png",
+    category: "Chinese",
   },
   {
-    media: "/assets/DIFC.png",
+    media: "/assets/Italianfood.png",
+    category: "Italian",
+  },
+  {
+    media: "/assets/JapaneseFood.png",
+    category: "Japanese",
+  },
+  {
+    media: "/assets/RussianFood.png",
     category: "Russian",
   },
   {
-    media: "/assets/Palm_Jumeirah.png",
-    category: "Mexian",
-  },
-  {
-    media: "/assets/DIFC.png",
-    category: "Thai",
-  },
-  {
-    media: "/assets/1.jpg",
-    category: "Italian",
+    media: "/assets/SeaFood.png",
+    category: "Sea Food",
   },
 ];
 function CategoryPost() {
