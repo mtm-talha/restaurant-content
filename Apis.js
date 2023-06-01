@@ -2,10 +2,13 @@ import axios from "axios";
 import { getAuthToken } from "./Auth";
 const baseUrl = import.meta.env.VITE_API_BASE_URL;
 
-export const getRestaurantsData = async () => {
+export const getRestaurantsData = async (postId) => {
   try {
     const token = getAuthToken();
-    const response = await axios.get(`${baseUrl}/restaurants?populate=*`, {
+    const url = postId
+      ? `${baseUrl}/restaurants?populate=*&filters[post][id][$eq]=${postId}`
+      : `${baseUrl}/restaurants?populate=*`;
+    const response = await axios.get(url, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -18,14 +21,19 @@ export const getRestaurantsData = async () => {
   }
 };
 // Function to make the GET API request
-export const getPostDataById = async (postId) => {
+export const getPostDataById = async (postId, query) => {
   try {
     const token = getAuthToken();
-    const response = await axios.get(`${baseUrl}/posts/${postId}`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
+    const queryParam = query ? `?populate[restaurants][populate][0]=media` : ``;
+
+    const response = await axios.get(
+      `${baseUrl}/posts/${postId}${queryParam}`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
     return response?.data;
   } catch (error) {
     // Handle error

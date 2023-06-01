@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { getRestaurantsData, getPostDataById } from "../Apis";
+import { getPostDataById } from "../Apis";
+// import { getRestaurantsData, getPostDataById } from "../Apis";
 import Restaurant from "./Restaurant";
 import moment from "moment/moment";
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 
 function PostDetails() {
   const { postId } = useParams();
@@ -11,24 +12,25 @@ function PostDetails() {
 
   const fetchPostDataById = async (postId) => {
     try {
-      const res = await getPostDataById(postId);
+      const res = await getPostDataById(postId, true);
       setPost(res?.data?.attributes);
+      setRestaurants(res?.data?.attributes?.restaurants?.data);
     } catch (error) {
       console.log(error);
     }
   };
-  const fetchRestaurants = async () => {
-    try {
-      const res = await getRestaurantsData();
-      setRestaurants(res?.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const fetchRestaurants = async () => {
+  //   try {
+  //     const res = await getRestaurantsData(postId);
+  //     setRestaurants(res?.data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
   useEffect(() => {
     fetchPostDataById(postId);
-    fetchRestaurants();
+    // fetchRestaurants(postId);
   }, []);
   return (
     <section className="detail-info">
