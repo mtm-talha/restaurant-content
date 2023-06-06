@@ -77,7 +77,7 @@ function RecentPost() {
                   <h3>{item?.attributes?.title}</h3>
                 </a>
                 <span className="post-date">
-                  {moment(item?.attributes?.createdAt).format("MMMM DD, YYYY")}
+                  {moment(item?.attributes?.dateTime).format("MMMM DD, YYYY")}
                 </span>
               </div>
             </div>

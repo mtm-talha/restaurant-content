@@ -48,7 +48,7 @@ const Post = () => {
                 <h3>{item?.attributes?.title}</h3>
                 <div className="post-detail">
                   <span className="post-date">
-                    {moment(item?.attributes?.createdAt).format(
+                    {moment(item?.attributes?.dateTime).format(
                       "MMMM DD, YYYY"
                     )}
                   </span>
