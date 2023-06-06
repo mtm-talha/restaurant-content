@@ -64,41 +64,6 @@ const Slider = () => {
               />
               <h2>Palm Jumeirah</h2>
             </div>
-            <div className="col">
-              <img
-                src="/assets/Atlantis_Dubai.png"
-                className="d-block w-100"
-                alt="Image 1"
-              />
-            </div>
-            <div className="col">
-              <img
-                src="/assets/Burj_Alarab.png"
-                className="d-block w-100"
-                alt="Image 2"
-              />
-            </div>
-            <div className="col">
-              <img
-                src="/assets/DIFC.png"
-                className="d-block w-100"
-                alt="Image 3"
-              />
-            </div>
-            <div className="col">
-              <img
-                src="/assets/Dubai_Marina.png"
-                className="d-block w-100"
-                alt="Image 4"
-              />
-            </div>
-            <div className="col">
-              <img
-                src="/assets/Palm_Jumeirah.png"
-                className="d-block w-100"
-                alt="Image 4"
-              />
-            </div>
           </div>
         </div>
         {/* Add more carousel-item elements for additional sets of images */}

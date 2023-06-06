@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 function Header() {
+
   const navigate = useNavigate();
   return (
     <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
@@ -21,7 +22,11 @@ function Header() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 me-5 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" onClick={() => navigate("/")}>
+              <a
+                className="nav-link active"
+                aria-current="page"
+                onClick={() => navigate("/")}
+              >
                 Home
               </a>
             </li>
@@ -47,6 +52,14 @@ function Header() {
               <i className="fab fa-instagram-square"></i>
             </a>
           </form>
+          <select className="selectpicker" data-width="fit">
+            <option data-content='<span class="flag-icon flag-icon-us"></span> English'>
+              English
+            </option>
+            <option data-content='<span class="flag-icon flag-icon-mx"></span> Español'>
+              Español
+            </option>
+          </select>
         </div>
       </div>
     </nav>
