@@ -13,7 +13,7 @@ function Home() {
       <div className="container">
         <CategoryPost />
         <section className="category-detail-container">
-          <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
+          <div className="row row-cols-1 row-cols-sm-1 row-cols-lg-3">
             <Post />
             <RecentPost />
           </div>
