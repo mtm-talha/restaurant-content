@@ -39,28 +39,27 @@ const Post = () => {
             </div>
             <div className="col-lg-7">
               <div className="category-right-info">
-                <a href="#">{item?.attributes?.foodType}</a>
+                <a
+                  className="a-pointer"
+                  onClick={() => handleRedirect(item?.id)}
+                >
+                  {item?.attributes?.foodType}
+                </a>
                 <h3>{item?.attributes?.title}</h3>
                 <div className="post-detail">
                   <span className="post-date">
-                    <a href="https://especio.themerex.net/lemon-and-banana-buns/">
-                      {moment(item?.attributes?.createdAt).format(
-                        "MMMM DD, YYYY"
-                      )}
-                    </a>
+                    {moment(item?.attributes?.dateTime).format(
+                      "MMMM DD, YYYY"
+                    )}
                   </span>
-                  <a href="#">
-                    <i className="fas fa-eye"></i>
-                    <span className="post-number">757</span>
-                    <span className="post-label">Views</span>
-                  </a>
-                  <a href="#">
-                    <i className="fas fa-comments"></i>
-                    <span className="post-number">0</span>
-                  </a>
                 </div>
                 <p>{item?.attributes?.description.substring(0, 140) + "..."}</p>
-                <a onClick={() => handleRedirect(item?.id)}>Read more</a>
+                <a
+                  onClick={() => handleRedirect(item?.id)}
+                  className="a-pointer"
+                >
+                  Read more
+                </a>
               </div>
             </div>
           </div>

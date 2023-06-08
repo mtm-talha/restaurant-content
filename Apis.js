@@ -57,3 +57,24 @@ export const getAllPosts = async () => {
     throw error;
   }
 };
+export const getRecentPosts = async () => {
+  try {
+    const today = new Date();
+    const date = new Date(today.setDate(today.getDate() - 5)).toISOString();
+
+    const token = getAuthToken();
+    const response = await axios.get(
+      `${baseUrl}/posts?populate[0]=picture&filters[dateTime][$gte]=${date}&pagination[page]=1&pagination[pageSize]=5`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+    return response?.data;
+  } catch (error) {
+    // Handle error
+    console.error("Error fetching API endpoint:", error);
+    throw error;
+  }
+};
