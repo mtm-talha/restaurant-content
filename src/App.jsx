@@ -10,7 +10,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/post" element={<Home />} />
           <Route path="*" element={<NotFoundPage />} />
-          <Route path="/post/:postId" element={<PostPage />} />
+          <Route path="/post/:title" element={<PostPage />} />
       </Routes>
     </BrowserRouter>
   );

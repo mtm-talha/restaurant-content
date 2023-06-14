@@ -21,13 +21,13 @@ export const getRestaurantsData = async (postId) => {
   }
 };
 // Function to make the GET API request
-export const getPostDataById = async (postId, query) => {
+export const getPostDataByTitle = async (title, query) => {
   try {
     const token = getAuthToken();
-    const queryParam = query ? `?populate[restaurants][populate][0]=media` : ``;
+    const queryParam = query ? `&populate[restaurants][populate][0]=media` : ``;
 
     const response = await axios.get(
-      `${baseUrl}/posts/${postId}${queryParam}`,
+      `${baseUrl}/posts/?filters[title][$eq]=${title}${queryParam}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,

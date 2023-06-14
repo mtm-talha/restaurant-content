@@ -49,9 +49,9 @@ function RecentPost() {
     fetchRecentPosts();
   }, []);
 
-  const handleRedirect = (id) => {
+  const handleRedirect = (title) => {
     // Redirect to a specific dynamic route
-    navigateTo(`/post/${id}`);
+    navigateTo(`/post/${title}`);
   };
   return (
     <div className="col-lg-4">
@@ -72,7 +72,7 @@ function RecentPost() {
               <div className="recent-post-right-info">
                 <a
                   className="a-pointer"
-                  onClick={() => handleRedirect(item?.id)}
+                  onClick={() => handleRedirect(item?.attributes?.title)}
                 >
                   <h3>{item?.attributes?.title}</h3>
                 </a>
