@@ -26,7 +26,7 @@ const Post = () => {
   return (
     <>
       <Helmet>
-        <title>Post</title>
+        <title>My Butler</title>
         <meta name="description" content="Post for restaurants" />
         <meta
           name="keywords"

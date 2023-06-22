@@ -32,7 +32,7 @@ function PostDetails() {
   return (
     <>
       <Helmet>
-        <title>{title}</title>
+        <title>My Butler Post</title>
         <meta name="description" content={post?.description} />
         <meta name="keywords" content={post.keywords} />
       </Helmet>
