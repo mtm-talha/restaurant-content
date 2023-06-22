@@ -21,7 +21,7 @@ const Post = () => {
 
   const handleRedirect = (title) => {
     // Redirect to a specific dynamic route
-    navigateTo(`/post/${title}`);
+    navigateTo(`/post/${title.replaceAll(" ", "-")}`);
   };
   return (
     <>
@@ -40,10 +40,17 @@ const Post = () => {
               <div className="col-lg-5">
                 {item?.attributes?.picture?.data && (
                   <div className="category-left-info">
-                    <img
-                      src={`https://admin.mybutler.co${item?.attributes?.picture?.data?.attributes?.url}`}
-                      alt="post thumbnail"
-                    />
+                    <a
+                      className="a-pointer"
+                      target="_blank"
+                      rel="noreferrer"
+                      href={`https://admin.mybutler.co${item?.attributes?.picture?.data?.attributes?.url}`}
+                    >
+                      <img
+                        src={`https://admin.mybutler.co${item?.attributes?.picture?.data?.attributes?.url}`}
+                        alt="post thumbnail"
+                      />
+                    </a>
                   </div>
                 )}
               </div>

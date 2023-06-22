@@ -14,12 +14,12 @@ function PostDetails() {
 
   const fetchPostDataByTitle = async (title) => {
     try {
-      const res = await getPostDataByTitle(title, true);
+      const res = await getPostDataByTitle(title.replaceAll('-',' '), true);
       if (res?.data?.length > 0) {
         setPost(res?.data[0]?.attributes);
         setRestaurants(res?.data[0]?.attributes?.restaurants?.data);
       } else {
-        navigateTo(`/post`);
+        navigateTo(`/`);
       }
     } catch (error) {
       console.log(error);

@@ -51,7 +51,7 @@ function RecentPost() {
 
   const handleRedirect = (title) => {
     // Redirect to a specific dynamic route
-    navigateTo(`/post/${title}`);
+    navigateTo(`/post/${title.replaceAll(" ", "-")}`);
   };
   return (
     <div className="col-lg-4">
@@ -61,10 +61,17 @@ function RecentPost() {
             <div className="col-4">
               {item?.attributes?.picture?.data && (
                 <div className="recent-post-left-info">
-                  <img
-                    src={`https://admin.mybutler.co${item?.attributes?.picture?.data?.attributes?.url}`}
-                    alt="post thumbnail"
-                  />
+                  <a
+                    className="a-pointer"
+                    target="_blank"
+                    rel="noreferrer"
+                    href={`https://admin.mybutler.co${item?.attributes?.picture?.data?.attributes?.url}`}
+                  >
+                    <img
+                      src={`https://admin.mybutler.co${item?.attributes?.picture?.data?.attributes?.url}`}
+                      alt="post thumbnail"
+                    />
+                  </a>
                 </div>
               )}
             </div>
