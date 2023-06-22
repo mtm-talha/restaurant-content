@@ -33,8 +33,8 @@ function PostDetails() {
     <>
       <Helmet>
         <title>My Butler Post</title>
-        <meta name="description" content={post?.description} />
-        <meta name="keywords" content={post.keywords} />
+        <meta name="description" content={post?.description} data-rh="true"/>
+        <meta name="keywords" content={post.keywords} data-rh="true"/>
       </Helmet>
       <section className="detail-info">
         <h4>{post?.title}</h4>
