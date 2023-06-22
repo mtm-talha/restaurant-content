@@ -6,7 +6,7 @@ function Header() {
     <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
       <div className="container">
         <a className="navbar-brand" href="#" onClick={() => navigate("/")}>
-          <img src="/public/assets/logo.png" width="80" height="40" alt="Logo icon" />
+          <img src="/assets/logo.png" width="80" height="40" alt="Logo icon" />
         </a>
         <button
           className="navbar-toggler"
