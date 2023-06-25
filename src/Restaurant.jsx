@@ -61,23 +61,31 @@ const RestaurantContent = ({ item }) => (
 
 const RestaurantMedia = ({ item }) => (
   <>
-    {item.attributes?.media?.data.map((img, index) => (
-      <a
-        key={index}
-        className="a-pointer"
-        target="_blank"
-        rel="noreferrer"
-        href={`https://admin.mybutler.co${item?.attributes?.url}`}
-      >
-        <img
-          height={"450px"}
-          width={"550px"}
+    {item.attributes?.media?.data ? (
+      item.attributes?.media?.data.map((img, index) => (
+        <a
           key={index}
-          src={`https://admin.mybutler.co${img.attributes?.url}`}
-          alt="post-thumb"
-        />
-      </a>
-    ))}
+          className="a-pointer"
+          target="_blank"
+          rel="noreferrer"
+          href={`https://admin.mybutler.co${item?.attributes?.url}`}
+        >
+          <img
+            height={"450px"}
+            width={"550px"}
+            key={index}
+            src={`https://admin.mybutler.co${img.attributes?.url}`}
+            alt="post-thumb"
+          />
+        </a>
+      ))
+    ) : (
+      <img
+        height={"450px"}
+        width={"550px"}
+        alt="post-picture"
+      />
+    )}
   </>
 );
 function Restaurant(props) {
