@@ -11,14 +11,13 @@ function PostDetails() {
   const [restaurants, setRestaurants] = useState([]);
   const [post, setPost] = useState([]);
   const navigateTo = useNavigate();
-  console.log(restaurants);
+
   const fetchPostDataByTitle = async (title) => {
     try {
       const res = await getPostDataByTitle(title.replaceAll('-',' '), true);
       if (res?.data?.length > 0) {
         setPost(res?.data[0]?.attributes);
-        console.log(res?.data[0]?.attributes?.restaurants?.data?.[0]);
-        setRestaurants([res?.data[0]?.attributes?.restaurants?.data[0]]);
+        setRestaurants(res?.data[0]?.attributes?.restaurants?.data);
       } else {
         navigateTo(`/`);
       }
@@ -38,18 +37,18 @@ function PostDetails() {
         <meta name="keywords" content={post.keywords} data-rh="true"/>
       </Helmet>
       <section className="detail-info">
-        {/* <h4>{post?.title}</h4>
+        <h4>{post?.title}</h4>
         <small>{moment(post?.dateTime).format("MMM DD, YYYY")}</small>
-        <p className="mb100">{post.description}</p> */}
+        <p className="mb100">{post.description}</p>
         <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-2">
           {restaurants?.map((restaurant, index) => (
             <Restaurant item={restaurant} key={index} index={index} />
           ))}
         </div>
-        {/* <span className="mb100">
+        <span className="mb100">
           <h3>Conclusion</h3>
           {post?.conclusion}
-        </span> */}
+        </span>
       </section>
     </>
   );
